@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Thread;
 use Illuminate\Http\Request;
 
@@ -18,5 +19,9 @@ class ThreadController extends Controller
     {
         $thread->load('replies');
         return view('threads.show', compact('thread'));
+    }
+    public function create()
+    {
+
     }
 }
